@@ -12,7 +12,7 @@ export default class GenericValidator {
   initialiseInput() {
     this.doValidityChecks = this.doValidityChecks.bind(this);
     this.input.addEventListener('focus', this.doValidityChecks);
-    this.input.addEventListener('input', this.doValidityChecks)
+    this.input.addEventListener('input', this.doValidityChecks);
   }
 
   doValidityChecks() {
