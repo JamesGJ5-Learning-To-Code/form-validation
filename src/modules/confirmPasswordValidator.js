@@ -5,6 +5,8 @@ export default class ConfirmPasswordValidator extends GenericValidator {
     super(confirmPasswordInput, errorMessageSpan);
     this.messageWhenInvalid = 'The passwords do not match';
     this.passwordInput = passwordInput;
+
+    this.activatePasswordChangeDetector();
   }
 
   doValidityChecks() {
@@ -14,5 +16,10 @@ export default class ConfirmPasswordValidator extends GenericValidator {
       this.control.setCustomValidity(this.messageWhenInvalid);
     }
     super.doValidityChecks();
+  }
+
+  activatePasswordChangeDetector() {
+    this.doValidityChecks = this.doValidityChecks.bind(this);
+    this.passwordInput.addEventListener('input', this.doValidityChecks);
   }
 }
