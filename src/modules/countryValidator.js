@@ -1,8 +1,8 @@
-import ErrorHandler from "./errorHandler";
+import GenericValidator from './genericValidator';
 
-export default class CountryValidator {
+export default class CountryValidator extends GenericValidator {
   constructor(select, errorMessageDisplayer) {
-    this.select = select;
-    this.errorHandler = new ErrorHandler(errorMessageDisplayer);
+    super(select, errorMessageDisplayer);
+    this.messageWhenInvalid = 'A country selection is required';
   }
 }
