@@ -1,33 +1,8 @@
-import ErrorHandler from './errorHandler';
+import GenericValidator from './genericValidator';
 
-export default class EmailValidator {
+export default class EmailValidator extends GenericValidator {
   constructor(input, errorMessageDisplayer) {
-    this.input = input;
+    super(input, errorMessageDisplayer);
     this.messageWhenInvalid = 'A valid email address is required';
-    this.errorHandler = new ErrorHandler(errorMessageDisplayer);
-
-    this.initialiseInput();
-  }
-
-  initialiseInput() {
-    this.doValidityChecks = this.doValidityChecks.bind(this);
-    this.input.addEventListener('focus', this.doValidityChecks);
-    // this.input.addEventListener('input', this.doValidityChecks)
-  }
-
-  doValidityChecks() {
-    if (!this.input.checkValidity()) {
-      this.displayError();
-    } else {
-      this.cancelError();
-    }
-  }
-
-  displayError() {
-    this.errorHandler.errorMessage = this.messageWhenInvalid;
-  }
-
-  cancelError() {
-    this.errorHandler.errorMessage = '';
   }
 }
