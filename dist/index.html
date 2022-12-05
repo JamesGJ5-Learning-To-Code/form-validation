@@ -9,6 +9,44 @@
     <script src="./main.js" defer></script>
 </head>
 <body>
-    
+    <form>
+        <label for="email">
+            Email <span aria-label="required">*</span>
+        </label>
+        <input type="email" name="email" id="email" required>
+        <span class="error-message" aria-live="polite"></span>
+
+        <label for="country">
+            Country <span aria-label="required">*</span>
+        </label>
+        <select name="country" id="country" required>
+            <option value="">Please select</option>
+            <!-- TODO: insert options dynamically -->
+        </select>
+        <span class="error-message" aria-live="polite"></span>
+
+        <label for="zip-code">
+            Zip Code <span aria-label="required">*</span>
+        </label>
+        <input type="text" name="zip-code" id="zip-code" required>
+        <span class="error-message" aria-live="polite"></span>
+
+        <label for="password">
+            Password <span aria-label="required">*</span>
+        </label>
+        <input type="password" name="password" id="password" 
+            required minlength="7">
+        <span class="error-message" aria-live="polite"></span>
+
+        <label for="confirm-password">
+            Confirm Password <span aria-label="required">*</span>
+        </label>
+        <input type="password" name="confirm-password" id="confirm-password" 
+            required>
+        <span class="error-message" aria-live="polite"></span>
+
+        <button>Submit</button>
+        <span class="error-message" aria-live="polite"></span>
+    </form>
 </body>
 </html>
