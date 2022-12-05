@@ -1,0 +1,1 @@
+(()=>{"use strict";console.log(class{static validatorList=[];static loadValidators(){}}.validatorList)})();
