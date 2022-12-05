@@ -1,22 +1,22 @@
 import ErrorHandler from './errorHandler';
 
 export default class GenericValidator {
-  constructor(input, errorMessageDisplayer) {
-    this.input = input;
+  constructor(control, errorMessageDisplayer) {
+    this.control = control;
     this.messageWhenInvalid = 'Invalid';
     this.errorHandler = new ErrorHandler(errorMessageDisplayer);
 
-    this.initialiseInput();
+    this.initialiseControl();
   }
 
-  initialiseInput() {
+  initialiseControl() {
     this.doValidityChecks = this.doValidityChecks.bind(this);
-    this.input.addEventListener('focus', this.doValidityChecks);
-    this.input.addEventListener('input', this.doValidityChecks);
+    this.control.addEventListener('focus', this.doValidityChecks);
+    this.control.addEventListener('control', this.doValidityChecks);
   }
 
   doValidityChecks() {
-    if (!this.input.checkValidity()) {
+    if (!this.control.checkValidity()) {
       this.displayError();
     } else {
       this.cancelError();

@@ -1,8 +1,8 @@
-import ErrorHandler from './errorHandler';
+import ErrorHandler from "./errorHandler";
 
 export default class CountryValidator {
-  constructor(input, errorMessageDisplayer) {
-    this.input = input;
+  constructor(select, errorMessageDisplayer) {
+    this.select = select;
     this.errorHandler = new ErrorHandler(errorMessageDisplayer);
   }
 }

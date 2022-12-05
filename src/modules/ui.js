@@ -36,8 +36,8 @@ export default class UI {
     UI.validatorList.push(emailValidator);
   }
 
-  static loadCountryValidator(input, errorMessageSpan) {
-    const countryValidator = new CountryValidator(input, errorMessageSpan);
+  static loadCountryValidator(select, errorMessageSpan) {
+    const countryValidator = new CountryValidator(select, errorMessageSpan);
     UI.validatorList.push(countryValidator);
   }
 
