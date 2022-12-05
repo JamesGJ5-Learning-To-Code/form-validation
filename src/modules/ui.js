@@ -20,11 +20,11 @@ export default class UI {
     const zipCodeErrorMessageSpan = document.getElementById('zip-code-error-message');
     UI.loadZipCodeValidator(zipCodeInput, zipCodeErrorMessageSpan);
 
-    const passwordInput = document.getElementById('password-input');
+    const passwordInput = document.getElementById('password');
     const passwordInputErrorMessageSpan = document.getElementById('password-error-message');
     UI.loadPasswordValidator(passwordInput, passwordInputErrorMessageSpan);
     
-    const confirmPasswordInput = document.getElementById('confirm-password-input');
+    const confirmPasswordInput = document.getElementById('confirm-password');
     const confirmPasswordErrorMessageSpan = document.getElementById(
       'confirm-password-error-message'
     );
