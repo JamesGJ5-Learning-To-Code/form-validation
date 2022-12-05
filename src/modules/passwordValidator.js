@@ -4,6 +4,6 @@ export default class PasswordValidator extends GenericValidator {
   constructor(passwordInput, errorMessageSpan) {
     super(passwordInput, errorMessageSpan);
     this.messageWhenInvalid =
-      'A password with at least one digit, at least one lowercase letter, at least one uppercase letter and a special character is required';
+      'An 8-16 character password is required with at least one of each of: a digit, a lowercase letter, an uppercase letter and a special character.';
   }
 }

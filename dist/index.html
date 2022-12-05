@@ -48,7 +48,8 @@
             <label for="password">
                 Password <span aria-label="required">*</span>
                 <input type="password" name="password" id="password"
-                    required minlength="7">
+                    required 
+                    pattern="^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*\W)(?!.* ).{8,16}$">
                 <span id="password-error-message" class="error-message" 
                     aria-live="polite"></span>
             </label>
