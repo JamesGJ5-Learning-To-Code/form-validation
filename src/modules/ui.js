@@ -11,15 +11,19 @@ export default class UI {
     const emailInput = document.getElementById('email');
     const emailErrorMessageSpan = document.getElementById('email-error-message');
     UI.loadEmailValidator(emailInput, emailErrorMessageSpan);
+
     const countryInput = document.getElementById('country');
     const countryErrorMessageSpan = document.getElementById('country-error-message');
     UI.loadCountryValidator(countryInput, countryErrorMessageSpan);
+
     const zipCodeInput = document.getElementById('zip-code');
     const zipCodeErrorMessageSpan = document.getElementById('zip-code-error-message');
     UI.loadZipCodeValidator(zipCodeInput, zipCodeErrorMessageSpan);
+
     const passwordInput = document.getElementById('password-input');
     const passwordInputErrorMessageSpan = document.getElementById('password-error-message');
     UI.loadPasswordValidator(passwordInput, passwordInputErrorMessageSpan);
+    
     const confirmPasswordInput = document.getElementById('confirm-password-input');
     const confirmPasswordErrorMessageSpan = document.getElementById(
       'confirm-password-error-message'
