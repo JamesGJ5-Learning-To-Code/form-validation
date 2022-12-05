@@ -1,8 +1,8 @@
 import GenericValidator from './genericValidator';
 
 export default class EmailValidator extends GenericValidator {
-  constructor(input, errorMessageDisplayer) {
-    super(input, errorMessageDisplayer);
+  constructor(control, errorMessageDisplayer) {
+    super(control, errorMessageDisplayer);
     this.messageWhenInvalid = 'A valid email address is required';
   }
 }
