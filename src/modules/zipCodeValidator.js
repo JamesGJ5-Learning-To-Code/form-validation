@@ -1,8 +1,8 @@
-import ErrorHandler from './errorHandler';
+import GenericValidator from './genericValidator';
 
-export default class ZipCodeValidator {
-  constructor(input, errorMessageDisplayer) {
-    this.input = input;
-    this.errorHandler = new ErrorHandler(errorMessageDisplayer);
+export default class ZipCodeValidator extends GenericValidator {
+  constructor(input, errorMessageSpan) {
+    super(input, errorMessageSpan);
+    this.messageWhenInvalid = 'A valid zip code for the selected country is required';
   }
 }
