@@ -2,6 +2,7 @@ import GenericValidator from './genericValidator';
 import { countryZipCodeMap } from './countryZipCodeMap';
 
 export default class ZipCodeValidator extends GenericValidator {
+  // TODO: make a countrySelect (or countryControl) a parameter, so don't have to find the input later
   constructor(control, errorMessageSpan) {
     super(control, errorMessageSpan);
     this.messageWhenInvalid = 'A valid zip code for the selected country is required';
