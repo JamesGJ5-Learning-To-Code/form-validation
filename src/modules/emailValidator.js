@@ -18,10 +18,16 @@ export default class EmailValidator {
   doValidityChecks() {
     if (!this.input.checkValidity()) {
       this.displayError();
-    };
+    } else {
+      this.cancelError();
+    }
   }
 
   displayError() {
     this.errorHandler.errorMessage = this.messageWhenInvalid;
+  }
+
+  cancelError() {
+    this.errorHandler.errorMessage = '';
   }
 }
