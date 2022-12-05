@@ -14,7 +14,8 @@
             <label for="email">
                 Email <span aria-label="required">*</span>
                 <input type="email" name="email" id="email" required>
-                <span class="error-message" aria-live="polite"></span>
+                <span id="password-error-message" class="error-message" 
+                    aria-live="polite"></span>
             </label>
         </p>
 
@@ -25,7 +26,8 @@
                     <option value="">Please select</option>
                     <!-- TODO: insert options dynamically -->
                 </select>
-                <span class="error-message" aria-live="polite"></span>
+                <span id="country-error-message" class="error-message" 
+                    aria-live="polite"></span>
             </label>
         </p>
 
@@ -33,7 +35,8 @@
             <label for="zip-code">
                 Zip Code <span aria-label="required">*</span>
                 <input type="text" name="zip-code" id="zip-code" required>
-                <span class="error-message" aria-live="polite"></span>
+                <span id="zip-code-error-message" class="error-message" 
+                    aria-live="polite"></span>
             </label>
         </p>
 
@@ -42,7 +45,8 @@
                 Password <span aria-label="required">*</span>
                 <input type="password" name="password" id="password"
                     required minlength="7">
-                <span class="error-message" aria-live="polite"></span>
+                <span id="password-error-message" class="error-message" 
+                    aria-live="polite"></span>
             </label>
         </p>
 
@@ -51,13 +55,15 @@
                 Confirm Password <span aria-label="required">*</span>
                 <input type="password" name="confirm-password" id="confirm-password"
                     required>
-                <span class="error-message" aria-live="polite"></span>
+                <span id="confirm-password-error-message" 
+                    class="error-message" aria-live="polite"></span>
             </label>
         </p>
 
         <p>
             <button>Submit</button>
-            <span class="error-message" aria-live="polite"></span>
+            <span id="submit-error-message" class="error-message" 
+                aria-live="polite"></span>
         </p>
     </form>
 </body>
