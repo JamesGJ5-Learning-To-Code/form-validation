@@ -1,0 +1,31 @@
+body {
+    width: 300px;
+}
+
+p * {
+    display: block;
+}
+
+span[aria-label="required"] {
+    display: inline;
+}
+
+input, 
+select, 
+button, 
+.error-message {
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.error-message {
+    padding: 0;
+
+    color: white;
+    background-color: #900;
+    border-radius: 0 0 5px 5px;
+}
+
+.active {
+    padding: 0.3em;
+}

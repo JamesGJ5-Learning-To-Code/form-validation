@@ -13,46 +13,46 @@
         <p>
             <label for="email">
                 Email <span aria-label="required">*</span>
+                <input type="email" name="email" id="email" required>
+                <span class="error-message" aria-live="polite"></span>
             </label>
-            <input type="email" name="email" id="email" required>
-            <span class="error-message" aria-live="polite"></span>
         </p>
 
         <p>
             <label for="country">
                 Country <span aria-label="required">*</span>
+                <select name="country" id="country" required>
+                    <option value="">Please select</option>
+                    <!-- TODO: insert options dynamically -->
+                </select>
+                <span class="error-message" aria-live="polite"></span>
             </label>
-            <select name="country" id="country" required>
-                <option value="">Please select</option>
-                <!-- TODO: insert options dynamically -->
-            </select>
-            <span class="error-message" aria-live="polite"></span>
         </p>
 
         <p>
             <label for="zip-code">
                 Zip Code <span aria-label="required">*</span>
+                <input type="text" name="zip-code" id="zip-code" required>
+                <span class="error-message" aria-live="polite"></span>
             </label>
-            <input type="text" name="zip-code" id="zip-code" required>
-            <span class="error-message" aria-live="polite"></span>
         </p>
 
         <p>
             <label for="password">
                 Password <span aria-label="required">*</span>
+                <input type="password" name="password" id="password"
+                    required minlength="7">
+                <span class="error-message" aria-live="polite"></span>
             </label>
-            <input type="password" name="password" id="password"
-                required minlength="7">
-            <span class="error-message" aria-live="polite"></span>
         </p>
 
         <p>
             <label for="confirm-password">
                 Confirm Password <span aria-label="required">*</span>
+                <input type="password" name="confirm-password" id="confirm-password"
+                    required>
+                <span class="error-message" aria-live="polite"></span>
             </label>
-            <input type="password" name="confirm-password" id="confirm-password"
-                required>
-            <span class="error-message" aria-live="polite"></span>
         </p>
 
         <p>
