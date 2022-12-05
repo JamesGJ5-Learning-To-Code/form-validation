@@ -65,7 +65,7 @@ export default class UI {
   }
 
   static loadSubmissionValidator(submissionButton, errorMessageSpan) {
-    const submissionValidator = new SubmissionValidator(submissionButton, errorMessageSpan);
+    const submissionValidator = new SubmissionValidator(submissionButton, errorMessageSpan, UI.validatorList);
     // TODO: disable the below return if possible
     return submissionValidator;
   }
