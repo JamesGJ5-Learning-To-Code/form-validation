@@ -6,6 +6,8 @@ export default class ZipCodeValidator extends GenericValidator {
     super(control, errorMessageSpan);
     this.messageWhenInvalid = 'A valid zip code for the selected country is required';
     this.countryZipCodeMap = countryZipCodeMap;
+
+    this.activateCountryChangeDetector();
   }
 
   doValidityChecks() {
@@ -16,9 +18,13 @@ export default class ZipCodeValidator extends GenericValidator {
   }
 
   getCountry() {
-    const form = this.control.closest('form');
-    const countryControl = form.querySelector('.country');
+    const countryControl = this.getCountryControl();
     return countryControl.value;
+  }
+
+  getCountryControl() {
+    const form = this.control.closest('form');
+    return form.querySelector('.country');
   }
 
   checkPattern(country, zipCode) {
@@ -29,6 +35,14 @@ export default class ZipCodeValidator extends GenericValidator {
       } else {
         this.control.setCustomValidity(this.messageWhenInvalid);
       }
+    }
+  }
+
+  activateCountryChangeDetector() {
+    const countryControl = this.getCountryControl();
+    if (countryControl) {
+      this.doValidityChecks = this.doValidityChecks.bind(this);
+      countryControl.addEventListener('input', this.doValidityChecks);
     }
   }
 }
