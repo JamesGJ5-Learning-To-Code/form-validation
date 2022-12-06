@@ -1,3 +1,3 @@
 import UI from './modules/ui';
 
-document.addEventListener('DOMContentLoaded', UI.loadValidators);
+document.addEventListener('DOMContentLoaded', UI.loadTools);
