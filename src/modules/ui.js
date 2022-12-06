@@ -35,7 +35,11 @@ export default class UI {
         break;
       case 'confirm-password':
         const passwordInput = document.getElementById('password');
-        UI.loadConfirmPasswordValidator(inputProcessed, passwordInput, errorMessageSpan);
+        UI.loadConfirmPasswordValidator(
+          inputProcessed, 
+          passwordInput, 
+          errorMessageSpan
+        );
     }
   }
 
@@ -64,6 +68,10 @@ export default class UI {
   }
 
   static loadSubmissionGate(submissionButton, errorMessageSpan) {
-    const submissionGate = new SubmissionGate(submissionButton, UI.validatedElements, errorMessageSpan);
+    const submissionGate = new SubmissionGate(
+      submissionButton,
+      UI.validatedElements,
+      errorMessageSpan
+    );
   }
 }
