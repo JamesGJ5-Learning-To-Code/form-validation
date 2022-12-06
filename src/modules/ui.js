@@ -8,38 +8,47 @@ import SubmissionGate from './submissionGate';
 export default class UI {
   static validatedElements = [];
 
-  static loadValidators() {
-    UI.processInput('email');
-    UI.processInput('country');
-    UI.processInput('zip-code');
-    UI.processInput('password');
-    UI.processInput('confirm-password');
+  static loadTools() {
+    UI.processElement('email');
+    UI.processElement('country');
+    UI.processElement('zip-code');
+    UI.processElement('password');
+    UI.processElement('confirm-password');
+    UI.processElement('submit');
   }
 
-  static processInput(inputID) {
-    const inputProcessed = document.getElementById(inputID);
-    const errorMessageSpan = document.getElementById(`${inputID}-error-message`);
-    UI.validatedElements.push(inputProcessed);
-    switch (inputID) {
+  static processElement(elementID) {
+    const elementProcessed = document.getElementById(elementID);
+    const errorMessageSpan = document.getElementById(`${elementID}-error-message`);
+    switch (elementID) {
       case 'email':
-        UI.loadEmailValidator(inputProcessed, errorMessageSpan);
+        UI.validatedElements.push(elementProcessed);
+        UI.loadEmailValidator(elementProcessed, errorMessageSpan);
         break;
       case 'country':
-        UI.loadCountryValidator(inputProcessed, errorMessageSpan);
+        UI.validatedElements.push(elementProcessed);
+        UI.loadCountryValidator(elementProcessed, errorMessageSpan);
         break;
       case 'zip-code':
-        UI.loadZipCodeValidator(inputProcessed, errorMessageSpan);
+        UI.validatedElements.push(elementProcessed);
+        UI.loadZipCodeValidator(elementProcessed, errorMessageSpan);
         break;
       case 'password':
-        UI.loadPasswordValidator(inputProcessed, errorMessageSpan);
+        UI.validatedElements.push(elementProcessed);
+        UI.loadPasswordValidator(elementProcessed, errorMessageSpan);
         break;
       case 'confirm-password':
+        UI.validatedElements.push(elementProcessed);
         const passwordInput = document.getElementById('password');
         UI.loadConfirmPasswordValidator(
-          inputProcessed, 
+          elementProcessed, 
           passwordInput, 
           errorMessageSpan
         );
+        break;
+      case 'submit':
+        UI.loadSubmissionGate(elementProcessed, errorMessageSpan);
+        break;
     }
   }
 
