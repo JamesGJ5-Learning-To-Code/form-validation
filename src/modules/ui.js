@@ -65,7 +65,5 @@ export default class UI {
 
   static loadSubmissionGate(submissionButton, errorMessageSpan) {
     const submissionValidator = new SubmissionValidator(submissionButton, errorMessageSpan, UI.validatorList);
-    // TODO: disable the below return if possible
-    return submissionValidator;
   }
 }
