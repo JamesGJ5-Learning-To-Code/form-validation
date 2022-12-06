@@ -1,5 +1,7 @@
 import ErrorHandler from './errorHandler';
 
+// TODO: some of the below is similar to code in ./genericValidator.js, so try to 
+// refactor in some way
 export default class SubmissionGate {
   constructor(submissionButton, validatedElements, errorMessageDisplayer) {
     this.submissionButton = submissionButton;
